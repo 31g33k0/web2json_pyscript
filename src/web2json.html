@@ -17,8 +17,7 @@
   </head>
 
   <body class="container">
-    <!-- <py-repl id="my-repl" auto-generate="true"> </py-repl> -->
-  <py-script src="./web2json.py">  </py-script>
+    <!--py-repl id="my-repl" auto-generate="true"> </py-repl-->
 
   <main>
     <section>
@@ -35,17 +34,18 @@
       <input id="rights" class="py-input" type="text">
       <input id="uri" class="py-input" type="text">
 
-      <button id="create" class="py-button" type="submit" py-onClick="getinput()">
-        create
-      </button>
-
-      <py-box id="json_output" class="py-output" type="text"></py-box>
-      <py-script>
-        from web2json import getInput
-        print (getInput())
-      </py-script>
-
+      <!--button id="create" class="py-button" type="submit" py-onClick="getinput()">
+        Fund the project
+      </button-->
+      <p>Json output : <label id='json'></label></p>
     </div>
+    <!--py-script src="./web2json.py">  </py-script-->
+    <py-script>
+
+
+pyscript.write('json',input)
+
+    </py-script>
 
     <py-list id="myList"></py-list>
     <div id="list-tasks-container" class="flex flex-col-reverse mt-4">

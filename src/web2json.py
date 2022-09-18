@@ -1,5 +1,6 @@
 import datetime as dt
 from xml.dom.minidom import Element
+#import pyscript
 # import utils
 
 #tasks = []
@@ -35,7 +36,10 @@ def getInput(*ags, **kws):
     }
     return (input)
 
-Element('json_output').innerText = getInput()
+#pyscript.write('json',getInput())
+
+
+Element('json').innerText = getInput(creators,work_scope,work_time)
 
 #print("test")
-#print(getInput())
+print(getInput())
