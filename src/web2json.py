@@ -1,6 +1,6 @@
 import datetime as dt
 from xml.dom.minidom import Element
-import utils
+# import utils
 
 #tasks = []
 #task_template = Element("task-template").select(".task", from_content=True)
@@ -19,7 +19,7 @@ rights = Element("rights")
 uri = Element("uri")
 
 
-def getinput(*ags, **kws):
+def getInput(*ags, **kws):
 
     input = {
 #        "id": id,
@@ -33,23 +33,9 @@ def getinput(*ags, **kws):
 #        "done": False,
 #        "created_at": dt.now(),
     }
-    print (input)
+    return (input)
 
+Element('json_output').innerText = getInput()
 
-#def parseinput(*args, **kws):
-#    json="{"
-#    for elem in getinput():
-#        json+=str(elem)
-#        json+=","
-#        json2=json[:-1]
-#    json2 +="}"
-#    print (json2)
-#    return json2
-
-#def main():
-#    getinput(*ags, **kws)
-#    getinput(*ags, **kws)
-
-#main()
-
-getinput()
+#print("test")
+#print(getInput())

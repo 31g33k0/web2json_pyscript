@@ -7,11 +7,12 @@
     <title>Web2json</title>
 
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
     <py-env>
     - paths:
       - ./utils.py
+      - ./web2json.py
     </py-env>
   </head>
 
@@ -23,15 +24,10 @@
     <section>
 
     <div class="text-center w-full mb-8">
-      <h1 class="text-3xl font-bold text-gray-800 uppercase tracking-tight">Hyper2</h1>
+      <h1 class="text-3xl font-bold text-gray-800 uppercase tracking-tight">Hypercertain</h1>
     </div>
     <div>
-      <div class="text-center w-full mb-8">
-        <h1 class="text-3xl font-bold text-gray-800 uppercase tracking-tight">Hr</h1>
-      </div>
-        <input id="creators" class="py-input" type="text">
-
-      
+      <input id="creators" class="py-input" type="text">     
       <input id="work_scope" class="py-input" type="text">
       <input id="work_time" class="py-input" type="text">
       <input id="impact_scope" class="py-input" type="text">
@@ -40,8 +36,15 @@
       <input id="uri" class="py-input" type="text">
 
       <button id="create" class="py-button" type="submit" py-onClick="getinput()">
-        Add task
+        create
       </button>
+
+      <py-box id="json_output" class="py-output" type="text"></py-box>
+      <py-script>
+        from web2json import getInput
+        print (getInput())
+      </py-script>
+
     </div>
 
     <py-list id="myList"></py-list>
